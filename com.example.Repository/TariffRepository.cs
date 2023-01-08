@@ -23,21 +23,21 @@ public class TariffRepository: ITariffRepository
             {
                 energyRate = 0;
                 serviceCharge = 30;
-                var amount = readingDifference + (energyRate * serviceCharge);
+                var amount = readingDifference + (energyRate * 10);
                 return new AmountResponse(amount);
             }
             else if (readingDifference >= 11 && readingDifference <= 20)
             {
                 energyRate = 3;
                 serviceCharge = 30;
-                var amount = readingDifference + (energyRate * serviceCharge);
+                var amount = readingDifference + (energyRate * 10);
                 return new AmountResponse(amount);
             }
             else if (readingDifference >= 21 && readingDifference <= 30)
             {
                 energyRate = 6.5;
                 serviceCharge = 50;
-                var amount = (10 * 3) + (readingDifference + (energyRate * serviceCharge));
+                var amount = (10 * 3) + (readingDifference + (energyRate * 10));
                 return new AmountResponse(amount);
             }
             else if (readingDifference >= 31 && readingDifference <= 50)
